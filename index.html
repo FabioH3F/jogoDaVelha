@@ -1,0 +1,38 @@
+ <html>
+    <h1> jogo da velha </h1>
+    <style>
+        #game {
+            display: grid;
+            grid-template-columns: 1fr 9fr 1fr;
+        }
+    </style>
+
+    <body>
+        <div id="game"></div>
+        <script>
+            const jogadas = [
+                '','','',
+                '','','',
+                '','','',
+
+            ]
+            function fazerJogada(posicao){
+                jogadas[posicao] = "X";
+                desenharBotoes;
+            }
+            function desenharBotoes(){
+                const game = document.querySelector("#game");
+                for (let i = 0; i < 9; i++)
+                {
+                    game.innerHTML += 
+                     `<button onclick="fazerJogadas($(1))">
+                        ${jogadas[i]}
+                     </button>`
+                }
+            }
+            desenharBotoes();
+        </script>
+        
+        
+    </body>
+ </html>
